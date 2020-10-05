@@ -41,9 +41,9 @@ jobs:
     -
       run: |
         set -x        
-        while true
-          do
-            sleep 1
-            curl localhost:$port 
-            #| grep 'Welcome to nginx!' && break
-          done
+        #while true
+        #  do
+        #    sleep 1
+        #    curl localhost:$port 
+        #    #| grep 'Welcome to nginx!' && break
+        #  done
