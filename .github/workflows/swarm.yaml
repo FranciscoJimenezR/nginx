@@ -15,7 +15,8 @@ jobs:
         set -x
         project=$(basename $GITHUB_REPOSITORY)
         date=$(date +%s)
-        docker build -t $GITHUB_REPOSITORY:$mode-$date --no-cache .
+        #docker build -t $GITHUB_REPOSITORY:$mode-$date --no-cache .
+        docker build -t $project:$mode-$date --no-cache .
         #docker push $GITHUB_REPOSITORY:$mode-testing
       
         compose=etc/docker/$mode/$project.yaml        
