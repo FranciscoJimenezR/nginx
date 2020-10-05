@@ -23,6 +23,7 @@ jobs:
 
         sed -i s/latest/$mode-$date/ $compose
         docker build -t $GITHUB_REPOSITORY:$mode-$date --no-cache .
+        #docker push $GITHUB_REPOSITORY:$mode-testing
 
         docker swarm init
         sed -i s/worker/manager/ $compose
